@@ -9,4 +9,3 @@ function Adoptables() {
     ];
 };
 export default Adoptables;
-  

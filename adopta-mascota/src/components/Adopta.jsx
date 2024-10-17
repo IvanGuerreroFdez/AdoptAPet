@@ -19,6 +19,7 @@ function Adopta({selectedPet}){
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(`Solicitud de adopción enviada para ${selectedPet.name}`);
+        alert(`Solicitud de adopción enviada para ${selectedPet.name}`);
     };
 
     return <div>

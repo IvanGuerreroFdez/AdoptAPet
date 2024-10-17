@@ -2,11 +2,11 @@ import React from 'react';
 
 function Filtrar ({filter, onFiltrar}){
     const handleInputChange = (e) => {
-        const {name, data} = e.target;
+        const {name, value} = e.target;
 
         onFiltrar({
             ...filter,
-            [name]: data
+            [name]: value
         });
     };
 

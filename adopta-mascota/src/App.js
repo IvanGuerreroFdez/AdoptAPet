@@ -16,10 +16,11 @@ function App() {
 
   const [selectedPet, setSelectedPet] = useState(null);
 
-  const [pets, setPets] = useState(Adoptables());
+  const [pets] = useState(Adoptables());
 
   const FiltrarPets = pets.filter(pet => {
     return (
+      (filters.type !== '' || filters.raza !== '' || filters.age !== '' || filters.size !== '') &&
       (filters.type === '' || pet.type === filters.type) &&
       (filters.raza === '' || pet.raza === filters.raza) &&
       (filters.age === '' || pet.age === filters.age) &&
@@ -37,11 +38,15 @@ function App() {
 
       <Filtrar filter={filters} onFiltrar={handleFilterChange}/>
 
-      <Lista pets={FiltrarPets} onPet={setSelectedPet}/>
+      {FiltrarPets.length > 0 ? (
+        <Lista pets={FiltrarPets} onPet={setSelectedPet}/>
+      ) : (
+        <p>No hay mascotas disponibles. Modifica los filtros para ver opciones.</p>
+      )}
 
       <p><b>Gracias por elegir una mascota ^^</b></p>
 
-      {selectedPet && <Adopta onPet={selectedPet}/>}
+      {selectedPet && <Adopta selectedPet={selectedPet} />}
 
 
 
