@@ -7,13 +7,13 @@ function Lista({pets, onPet }){
 
         <ul>
             {pets.map(pet => (
-                <ul key={pet.id} style={{marginBottom: '20px'}}>
-                    <img src={pet.img} alt={pet.name} className='animalitos'/>
-                    <h4>{pet.name}</h4>
-                    <p>{pet.raza} / {pet.age} / {pet.size}</p>
+                <li key={pet.id} style={{ marginBottom: '20px', listStyleType: 'none' }}>
+                    <img src={pet.imagen} alt={pet.nombre} className='animalitos' />
+                    <h4>{pet.nombre}</h4>
+                    <p>{pet.edad} / {pet.genero}</p>
                     <button onClick={() => onPet(pet)}>Adoptar</button>
-                    <hr style={{width:'50%', border:'1px solid #000000'}}/>
-                </ul>
+                    <hr style={{ width: '50%', border: '1px solid #000000' }} />
+                </li>
             ))}
         </ul>
     </div>

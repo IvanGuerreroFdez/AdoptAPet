@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Filtrar ({filter, onFiltrar, onBuscar}){
+function Filtrar ({filter, onFiltrar, pets}){
     const handleInputChange = (e) => {
         const {name, value} = e.target;
 
@@ -10,10 +10,14 @@ function Filtrar ({filter, onFiltrar, onBuscar}){
         });
     };
 
+    const tipos = [...new Set(pets.map(pet => pet.tipo))];
+    const edades = [...new Set(pets.map(pet => pet.edad))];
+    const generos = [...new Set(pets.map(pet => pet.genero))];
+
     return <div>
         <h3>Mascotas</h3>
 
-        <label>Tipo de mascota: </label>
+        {/* <label>Tipo de mascota: </label>
         <select name="type" value={filter.type} onChange={handleInputChange}>
             <option value=""></option>
             <option value="dog">Perro</option>
@@ -43,11 +47,35 @@ function Filtrar ({filter, onFiltrar, onBuscar}){
             <option value=""></option>
             <option value="Small">Pequeño</option>
             <option value="Large">Grande</option>
-        </select>
+        </select> */}
 
         {/* No es necesario
         <button onClick={onBuscar}>Buscar</button>
         */}
+
+        <label>Tipo de mascota: </label>
+        <select name="type" value={filter.type} onChange={handleInputChange}>
+            <option value="">Cualquiera</option>
+            {tipos.map((tipo, idx) => (
+                <option key={idx} value={tipo}>{tipo}</option>
+            ))}
+        </select>
+
+        <label>Edad: </label>
+        <select name="edad" value={filter.edad} onChange={handleInputChange}>
+            <option value="">Cualquiera</option>
+            {edades.map((edad, idx) => (
+                <option key={idx} value={edad}>{edad}</option>
+            ))}
+        </select>
+
+        <label>Género: </label>
+        <select name="genero" value={filter.genero} onChange={handleInputChange}>
+            <option value="">Cualquiera</option>
+            {generos.map((genero, idx) => (
+                <option key={idx} value={genero}>{genero}</option>
+            ))}
+        </select>   
     </div>
 };
 export default Filtrar;
