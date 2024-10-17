@@ -16,6 +16,13 @@ function App() {
 
   const [selectedPet, setSelectedPet] = useState(null);
 
+  const [searchFilters, setSearchFilters] = useState({
+    type: '',
+    raza: '',
+    age: '',
+    size: ''
+  });
+
   const [pets] = useState(Adoptables());
 
   const FiltrarPets = pets.filter(pet => {
@@ -44,9 +51,7 @@ function App() {
         <p>No hay mascotas disponibles. Modifica los filtros para ver opciones.</p>
       )}
 
-      <p><b>Gracias por elegir una mascota ^^</b></p>
-
-      {selectedPet && <Adopta selectedPet={selectedPet} />}
+      {selectedPet && <Adopta selectedPet={selectedPet}/>}
 
 
 
