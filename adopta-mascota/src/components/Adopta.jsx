@@ -26,7 +26,7 @@ function Adopta({selectedPet}){
     return <div>
         <h3>Formulario de Adopción</h3>
 
-        <p>Adoptando: {selectedPet.name}</p>
+        <p>Adoptando: {selectedPet.nombre}</p>
 
         <form onSubmit={handleSubmit}>
             <label>Nombre:</label>
