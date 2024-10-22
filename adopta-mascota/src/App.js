@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Filtrar from './components/Filtrar';
 import Lista from './components/Lista';

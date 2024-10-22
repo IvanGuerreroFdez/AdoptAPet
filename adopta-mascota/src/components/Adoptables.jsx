@@ -15,7 +15,7 @@ function Adoptables({setPets, setLoading}) {
             try {
                 const response = await fetch('https://huachitos.cl/api/animales');
                 const data = await response.json();
-                setPets(data.data || []); // Suponemos que los datos vienen en `animales`
+                setPets(data.data || []);
                 setLoading(false);
             } catch (error) {
                 console.error("Error al obtener los animales:", error);

@@ -15,7 +15,7 @@ function Filtrar ({filter, onFiltrar, pets}){
     const generos = [...new Set(pets.map(pet => pet.genero))];
 
     return <div>
-        <h3>Mascotas</h3>
+        {/*<h3>Mascotas</h3>*/}
 
         {/* <label>Tipo de mascota: </label>
         <select name="type" value={filter.type} onChange={handleInputChange}>
@@ -53,7 +53,7 @@ function Filtrar ({filter, onFiltrar, pets}){
         <button onClick={onBuscar}>Buscar</button>
         */}
 
-        <label>Tipo de mascota: </label>
+        <label> | Tipo de mascota: </label>
         <select name="type" value={filter.type} onChange={handleInputChange}>
             <option value="">Cualquiera</option>
             {tipos.map((tipo, idx) => (
@@ -61,7 +61,7 @@ function Filtrar ({filter, onFiltrar, pets}){
             ))}
         </select>
 
-        <label>Edad: </label>
+        <label> | Edad: </label>
         <select name="edad" value={filter.edad} onChange={handleInputChange}>
             <option value="">Cualquiera</option>
             {edades.map((edad, idx) => (
@@ -69,13 +69,14 @@ function Filtrar ({filter, onFiltrar, pets}){
             ))}
         </select>
 
-        <label>Género: </label>
+        <label> | Género: </label>
         <select name="genero" value={filter.genero} onChange={handleInputChange}>
             <option value="">Cualquiera</option>
             {generos.map((genero, idx) => (
                 <option key={idx} value={genero}>{genero}</option>
             ))}
-        </select>   
+        </select>
+        <label> | </label>   
     </div>
 };
 export default Filtrar;

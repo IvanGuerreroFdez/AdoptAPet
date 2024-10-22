@@ -3,7 +3,7 @@ import '../styles/Animalitos.css';
 
 function Lista({pets, onPet }){
     return  <div align="center">
-        <h2>Mascotas disponibles</h2>
+        <h2>Mascotas disponibles!!!</h2>
 
         <ul>
             {pets.map(pet => (
