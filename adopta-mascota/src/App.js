@@ -31,7 +31,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Adopta ya!!!</h1>
+      {/*<h1>Adopta ya!!!</h1>*/}
+      <img alt="adopta" src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=68&center=true&vCenter=true&width=500&height=70&duration=2000&pause=2000&color=ff6f61&lines=Adopta+ya!!!;" />
+      <p></p>
 
       <Adoptables setPets={setPets} setLoading={setLoading}/>
 

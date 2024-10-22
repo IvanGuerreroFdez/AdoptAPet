@@ -5,8 +5,24 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-  }
+}
   
-  .animalitos:hover {
+.animalitos:hover {
     transform: scale(1.05);
-  }
+}
+
+.adopt-button {
+    background-color: #ff6f61; /* Color rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Tamaño del botón */
+    font-size: 1rem; /* Tamaño del texto */
+    border-radius: 15px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cursor pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones */
+}
+  
+.adopt-button:hover {
+    background-color: #e55a50; /* Color más oscuro en hover */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}

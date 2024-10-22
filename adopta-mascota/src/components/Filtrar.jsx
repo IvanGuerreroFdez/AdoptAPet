@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Filtros.css';
 
 function Filtrar ({filter, onFiltrar, pets}){
     const handleInputChange = (e) => {
@@ -53,30 +54,30 @@ function Filtrar ({filter, onFiltrar, pets}){
         <button onClick={onBuscar}>Buscar</button>
         */}
 
-        <label> | Tipo de mascota: </label>
-        <select name="type" value={filter.type} onChange={handleInputChange}>
+        <label id="filtros-label"> | Tipo de mascota: </label>
+        <select className="filtro-select" name="type" value={filter.type} onChange={handleInputChange}>
             <option value="">Cualquiera</option>
             {tipos.map((tipo, idx) => (
                 <option key={idx} value={tipo}>{tipo}</option>
             ))}
         </select>
 
-        <label> | Edad: </label>
-        <select name="edad" value={filter.edad} onChange={handleInputChange}>
+        <label id="filtros-label"> | Edad: </label>
+        <select className="filtro-select" name="edad" value={filter.edad} onChange={handleInputChange}>
             <option value="">Cualquiera</option>
             {edades.map((edad, idx) => (
                 <option key={idx} value={edad}>{edad}</option>
             ))}
         </select>
 
-        <label> | Género: </label>
-        <select name="genero" value={filter.genero} onChange={handleInputChange}>
+        <label id="filtros-label"> | Género: </label>
+        <select className="filtro-select" name="genero" value={filter.genero} onChange={handleInputChange}>
             <option value="">Cualquiera</option>
             {generos.map((genero, idx) => (
                 <option key={idx} value={genero}>{genero}</option>
             ))}
         </select>
-        <label> | </label>   
+        <label id="filtros-label"> | </label>   
     </div>
 };
 export default Filtrar;

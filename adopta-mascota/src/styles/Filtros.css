@@ -1,0 +1,20 @@
+.filtro-select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #0c0c0c;
+    background-color: white;
+    color: #333;
+    margin: 0 10px;
+    transition: border-color 0.3s ease;
+}
+  
+.filtro-select:focus {
+    border-color: #0a0a0a; 
+    outline: none;
+}
+
+#filtros-label {
+    font-weight: bold;
+    color: #090909;
+}
